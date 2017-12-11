@@ -19,4 +19,5 @@ Hook了PackaegManager，返回我们伪装的签名信息
 
 
 第三步:在App的Application的attachBaseContext()函数中调用我们的smali代码，smali:
+```java
     invoke-static {}, Lcom/yc/pm/SignatureKill;->kill()V
