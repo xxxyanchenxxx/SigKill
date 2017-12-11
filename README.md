@@ -1,5 +1,5 @@
 # SigKill
-App一键绕过签名验证
+一键绕过App签名验证
 Hook了PackaegManager，返回我们伪装的签名信息
 
 ## Demo效果：
