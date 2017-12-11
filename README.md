@@ -8,8 +8,12 @@
 
 
 
+
+
 ## 如何使用，分成3步
-首先将Libs/smali_lib中的代码复制到目标App中，不算入步骤，好了，接下来：
+首先将Libs/smali_lib中的代码复制到目标App的smali目录中，这步就不计入第一步了吧。
+
+然后,
 
 第一步:使用"Libs/签名获取.apk"获取到APK的真正签名信息，如下图
 ![image](https://github.com/xxxyanchenxxx/SigKill/blob/master/Libs/2.png)
