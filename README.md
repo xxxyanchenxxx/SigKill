@@ -2,14 +2,14 @@
 App一键绕过签名验证
 Hook了PackaegManager，返回我们伪装的签名信息
 
-##Demo效果：
+## Demo效果：
 ![image](https://github.com/xxxyanchenxxx/SigKill/blob/master/Libs/1.png)
 
 可以看到,第一次打印出的是真正的signatuer,后面经过hook后，就变了.....
 
 
 
-##如何使用，分成3步
+## 如何使用，分成3步
 首先将Libs/smali_lib中的代码复制到目标App中，不算入步骤，好了，接下来：
 
 第一步:使用"Libs/签名获取.apk"获取到APK的真正签名信息，如下图
