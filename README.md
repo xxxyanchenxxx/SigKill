@@ -19,7 +19,7 @@
 ![image](https://github.com/xxxyanchenxxx/SigKill/blob/master/Libs/2.png)
 
 
-第二步:将上一步得到的字符串替换掉"Libs/smali/com/yc/pm/SignatureFake.smali"中的字符串：
+第二步:复制上一步的字符串并替换掉"Libs/smali/com/yc/pm/SignatureFake.smali"中的字符串：
 ```java
 .method private static getSigStr()Ljava/lang/String;
     .locals 1
