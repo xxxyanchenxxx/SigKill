@@ -15,9 +15,20 @@ Hook了PackaegManager，返回我们伪装的签名信息
 
 
 第二步:将上一步得到的字符串替换掉"Libs/smali/com/yc/pm/SignatureFake.smali"中的字符串：
-![image](https://github.com/xxxyanchenxxx/SigKill/blob/master/Libs/3.png)
+```
+.method private static getSigStr()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 14
+    const-string/jumbo v0, "48,-126,2,-21,48,-126,2,84,-96,3,2,1,2,2,4,77,54,-9,-92,48,13,.......
+
+    return-object v0
+.end method
+```
 
 
 第三步:在App的Application的attachBaseContext()函数中调用我们的smali代码，smali:
 ```java
     invoke-static {}, Lcom/yc/pm/SignatureKill;->kill()V
+```
