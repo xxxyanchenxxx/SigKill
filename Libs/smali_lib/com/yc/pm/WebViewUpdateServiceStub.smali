@@ -31,8 +31,8 @@
     .locals 1
 
     .prologue
-    .line 15
-    const-string/jumbo v0, "webviewupdate"
+    .line 16
+    const-string v0, "webviewupdate"
 
     sput-object v0, Lcom/yc/pm/WebViewUpdateServiceStub;->WEBVIEW_UPDATE_SERVICE_NAME:Ljava/lang/String;
 
@@ -43,7 +43,7 @@
     .locals 2
 
     .prologue
-    .line 18
+    .line 19
     new-instance v0, Lcom/yc/pm/MethodInvocationStub;
 
     invoke-static {}, Lcom/yc/pm/WebViewUpdateServiceStub;->getInterface()Landroid/os/IInterface;
@@ -54,10 +54,10 @@
 
     invoke-direct {p0, v0}, Lcom/yc/pm/MethodInvocationProxy;-><init>(Lcom/yc/pm/MethodInvocationStub;)V
 
-    .line 19
+    .line 20
     invoke-direct {p0}, Lcom/yc/pm/WebViewUpdateServiceStub;->init()V
 
-    .line 21
+    .line 22
     return-void
 .end method
 
@@ -65,14 +65,14 @@
     .locals 5
 
     .prologue
-    .line 36
-    const-string/jumbo v0, "android.os.ServiceManager"
+    .line 43
+    const-string v0, "android.os.ServiceManager"
 
     invoke-static {v0}, Lcom/yc/pm/Reflect;->on(Ljava/lang/String;)Lcom/yc/pm/Reflect;
 
     move-result-object v0
 
-    const-string/jumbo v1, "getService"
+    const-string v1, "getService"
 
     const/4 v2, 0x1
 
@@ -84,7 +84,7 @@
 
     aput-object v4, v2, v3
 
-    .line 37
+    .line 44
     invoke-virtual {v0, v1, v2}, Lcom/yc/pm/Reflect;->call(Ljava/lang/String;[Ljava/lang/Object;)Lcom/yc/pm/Reflect;
 
     move-result-object v0
@@ -95,7 +95,7 @@
 
     check-cast v0, Landroid/os/IBinder;
 
-    .line 36
+    .line 43
     return-object v0
 .end method
 
@@ -107,14 +107,14 @@
 
     const/4 v6, 0x0
 
-    .line 28
-    const-string/jumbo v2, "android.os.ServiceManager"
+    .line 35
+    const-string v2, "android.os.ServiceManager"
 
     invoke-static {v2}, Lcom/yc/pm/Reflect;->on(Ljava/lang/String;)Lcom/yc/pm/Reflect;
 
     move-result-object v2
 
-    const-string/jumbo v3, "getService"
+    const-string v3, "getService"
 
     new-array v4, v7, [Ljava/lang/Object;
 
@@ -122,7 +122,7 @@
 
     aput-object v5, v4, v6
 
-    .line 29
+    .line 36
     invoke-virtual {v2, v3, v4}, Lcom/yc/pm/Reflect;->call(Ljava/lang/String;[Ljava/lang/Object;)Lcom/yc/pm/Reflect;
 
     move-result-object v2
@@ -131,15 +131,15 @@
 
     move-result-object v1
 
-    .line 31
+    .line 38
     .local v1, "service":Ljava/lang/Object;
-    const-string/jumbo v2, "android.webkit.IWebViewUpdateService$Stub"
+    const-string v2, "android.webkit.IWebViewUpdateService$Stub"
 
     invoke-static {v2}, Lcom/yc/pm/Reflect;->on(Ljava/lang/String;)Lcom/yc/pm/Reflect;
 
     move-result-object v2
 
-    const-string/jumbo v3, "asInterface"
+    const-string v3, "asInterface"
 
     new-array v4, v7, [Ljava/lang/Object;
 
@@ -155,7 +155,7 @@
 
     check-cast v0, Landroid/os/IInterface;
 
-    .line 32
+    .line 39
     .local v0, "asInterface":Landroid/os/IInterface;
     return-object v0
 .end method
@@ -164,7 +164,7 @@
     .locals 3
 
     .prologue
-    .line 41
+    .line 48
     new-instance v1, Lcom/yc/pm/WebViewUpdateServiceStub$WaitForAndGetProvider;
 
     const/4 v2, 0x0
@@ -173,10 +173,10 @@
 
     invoke-virtual {p0, v1}, Lcom/yc/pm/WebViewUpdateServiceStub;->addMethodProxy(Lcom/yc/pm/MethodProxy;)Lcom/yc/pm/MethodProxy;
 
-    .line 43
+    .line 50
     invoke-static {}, Lcom/yc/pm/WebViewUpdateServiceStub;->getBinder()Landroid/os/IBinder;
 
-    .line 44
+    .line 51
     new-instance v0, Lcom/yc/pm/BinderInvocationStub;
 
     invoke-virtual {p0}, Lcom/yc/pm/WebViewUpdateServiceStub;->getInvocationStub()Lcom/yc/pm/MethodInvocationStub;
@@ -191,7 +191,7 @@
 
     invoke-direct {v0, v1}, Lcom/yc/pm/BinderInvocationStub;-><init>(Landroid/os/IInterface;)V
 
-    .line 45
+    .line 52
     .local v0, "pmHookBinder":Lcom/yc/pm/BinderInvocationStub;
     invoke-virtual {p0}, Lcom/yc/pm/WebViewUpdateServiceStub;->getInvocationStub()Lcom/yc/pm/MethodInvocationStub;
 
@@ -199,25 +199,42 @@
 
     invoke-virtual {v0, v1}, Lcom/yc/pm/BinderInvocationStub;->copyMethodProxies(Lcom/yc/pm/MethodInvocationStub;)V
 
-    .line 46
+    .line 53
     sget-object v1, Lcom/yc/pm/WebViewUpdateServiceStub;->WEBVIEW_UPDATE_SERVICE_NAME:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/yc/pm/BinderInvocationStub;->replaceService(Ljava/lang/String;)V
 
-    .line 47
+    .line 54
     return-void
 .end method
 
 .method public static replaceService()V
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 24
+    .line 25
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x15
+
+    if-lt v0, v1, :cond_0
+
+    .line 27
+    :try_start_0
     new-instance v0, Lcom/yc/pm/WebViewUpdateServiceStub;
 
     invoke-direct {v0}, Lcom/yc/pm/WebViewUpdateServiceStub;-><init>()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 25
-    .local v0, "serviceStub":Lcom/yc/pm/WebViewUpdateServiceStub;
+    .line 32
+    :cond_0
+    :goto_0
     return-void
+
+    .line 28
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 .end method

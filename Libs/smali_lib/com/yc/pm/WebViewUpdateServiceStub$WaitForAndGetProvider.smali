@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 49
+    .line 56
     invoke-direct {p0}, Lcom/yc/pm/MethodProxy;-><init>()V
 
     return-void
@@ -30,7 +30,7 @@
     .param p1, "x0"    # Lcom/yc/pm/WebViewUpdateServiceStub$1;
 
     .prologue
-    .line 49
+    .line 56
     invoke-direct {p0}, Lcom/yc/pm/WebViewUpdateServiceStub$WaitForAndGetProvider;-><init>()V
 
     return-void
@@ -50,21 +50,21 @@
     .end annotation
 
     .prologue
-    .line 57
+    .line 64
     invoke-virtual {p2, p1, p3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 58
+    .line 65
     .local v1, "result":Ljava/lang/Object;
     if-eqz v1, :cond_0
 
-    .line 59
+    .line 66
     invoke-static {v1}, Lcom/yc/pm/Reflect;->on(Ljava/lang/Object;)Lcom/yc/pm/Reflect;
 
     move-result-object v2
 
-    const-string/jumbo v3, "packageInfo"
+    const-string v3, "packageInfo"
 
     invoke-virtual {v2, v3}, Lcom/yc/pm/Reflect;->get(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -72,16 +72,16 @@
 
     check-cast v0, Landroid/content/pm/PackageInfo;
 
-    .line 60
+    .line 67
     .local v0, "inf":Landroid/content/pm/PackageInfo;
     if-eqz v0, :cond_0
 
-    .line 61
+    .line 68
     invoke-static {v0}, Lcom/yc/pm/Reflect;->on(Ljava/lang/Object;)Lcom/yc/pm/Reflect;
 
     move-result-object v2
 
-    const-string/jumbo v3, "signatures"
+    const-string v3, "signatures"
 
     invoke-static {}, Lcom/yc/pm/SignatureFake;->getSignature()[Landroid/content/pm/Signature;
 
@@ -89,7 +89,7 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/yc/pm/Reflect;->set(Ljava/lang/String;Ljava/lang/Object;)Lcom/yc/pm/Reflect;
 
-    .line 64
+    .line 71
     .end local v0    # "inf":Landroid/content/pm/PackageInfo;
     :cond_0
     return-object v1
@@ -99,8 +99,8 @@
     .locals 1
 
     .prologue
-    .line 52
-    const-string/jumbo v0, "waitForAndGetProvider"
+    .line 59
+    const-string v0, "waitForAndGetProvider"
 
     return-object v0
 .end method

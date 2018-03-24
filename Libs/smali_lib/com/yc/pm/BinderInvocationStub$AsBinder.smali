@@ -68,7 +68,7 @@
 
     .prologue
     .line 41
-    const-string/jumbo v0, "asBinder"
+    const-string v0, "asBinder"
 
     return-object v0
 .end method

@@ -1,6 +1,7 @@
 package com.yc.pm;
 
 import android.content.pm.PackageInfo;
+import android.os.Build;
 import android.os.IBinder;
 import android.os.IInterface;
 import android.util.Log;
@@ -21,7 +22,13 @@ public class WebViewUpdateServiceStub extends MethodInvocationProxy<MethodInvoca
     }
 
     public static void replaceService(){
-        WebViewUpdateServiceStub serviceStub = new WebViewUpdateServiceStub();
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+            try {
+                WebViewUpdateServiceStub serviceStub = new WebViewUpdateServiceStub();
+            }catch (Exception e){
+
+            }
+        }
     }
 
     private static IInterface getInterface(){

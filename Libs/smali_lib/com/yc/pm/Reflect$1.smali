@@ -119,7 +119,7 @@
     :goto_1
     if-nez v1, :cond_1
 
-    const-string/jumbo v5, "get"
+    const-string v5, "get"
 
     invoke-virtual {v3, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -154,7 +154,7 @@
     :cond_1
     if-nez v1, :cond_2
 
-    const-string/jumbo v5, "is"
+    const-string v5, "is"
 
     invoke-virtual {v3, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -185,7 +185,7 @@
 
     if-ne v1, v5, :cond_3
 
-    const-string/jumbo v5, "set"
+    const-string v5, "set"
 
     invoke-virtual {v3, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 

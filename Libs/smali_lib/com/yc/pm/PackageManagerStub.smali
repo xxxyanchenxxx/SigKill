@@ -32,7 +32,7 @@
 
     .prologue
     .line 15
-    const-string/jumbo v0, "package"
+    const-string v0, "package"
 
     sput-object v0, Lcom/yc/pm/PackageManagerStub;->SERVICE:Ljava/lang/String;
 
@@ -66,13 +66,13 @@
 
     .prologue
     .line 36
-    const-string/jumbo v0, "android.os.ServiceManager"
+    const-string v0, "android.os.ServiceManager"
 
     invoke-static {v0}, Lcom/yc/pm/Reflect;->on(Ljava/lang/String;)Lcom/yc/pm/Reflect;
 
     move-result-object v0
 
-    const-string/jumbo v1, "getService"
+    const-string v1, "getService"
 
     const/4 v2, 0x1
 
@@ -108,13 +108,13 @@
     const/4 v6, 0x0
 
     .line 28
-    const-string/jumbo v2, "android.os.ServiceManager"
+    const-string v2, "android.os.ServiceManager"
 
     invoke-static {v2}, Lcom/yc/pm/Reflect;->on(Ljava/lang/String;)Lcom/yc/pm/Reflect;
 
     move-result-object v2
 
-    const-string/jumbo v3, "getService"
+    const-string v3, "getService"
 
     new-array v4, v7, [Ljava/lang/Object;
 
@@ -133,13 +133,13 @@
 
     .line 31
     .local v1, "service":Ljava/lang/Object;
-    const-string/jumbo v2, "android.content.pm.IPackageManager$Stub"
+    const-string v2, "android.content.pm.IPackageManager$Stub"
 
     invoke-static {v2}, Lcom/yc/pm/Reflect;->on(Ljava/lang/String;)Lcom/yc/pm/Reflect;
 
     move-result-object v2
 
-    const-string/jumbo v3, "asInterface"
+    const-string v3, "asInterface"
 
     new-array v4, v7, [Ljava/lang/Object;
 
@@ -230,13 +230,13 @@
     move-object v2, v0
 
     .line 55
-    const-string/jumbo v4, "android.app.ActivityThread"
+    const-string v4, "android.app.ActivityThread"
 
     invoke-static {v4}, Lcom/yc/pm/Reflect;->on(Ljava/lang/String;)Lcom/yc/pm/Reflect;
 
     move-result-object v4
 
-    const-string/jumbo v5, "sPackageManager"
+    const-string v5, "sPackageManager"
 
     invoke-virtual {v4, v5, v2}, Lcom/yc/pm/Reflect;->set(Ljava/lang/String;Ljava/lang/Object;)Lcom/yc/pm/Reflect;
     :try_end_1

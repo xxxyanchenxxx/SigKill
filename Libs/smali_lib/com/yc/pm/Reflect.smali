@@ -353,7 +353,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, " "
+    const-string v4, " "
 
     .line 564
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -373,7 +373,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, " "
+    const-string v4, " "
 
     .line 566
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -389,7 +389,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "("
+    const-string v4, "("
 
     .line 568
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -420,7 +420,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, ", "
+    const-string v6, ", "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -451,7 +451,7 @@
 
     .line 576
     :cond_1
-    const-string/jumbo v3, ")"
+    const-string v3, ")"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -898,7 +898,7 @@
     if-nez v0, :cond_0
 
     .line 129
-    const-string/jumbo v1, ""
+    const-string v1, ""
 
     .line 133
     :goto_0
@@ -1074,7 +1074,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "No similar method "
+    const-string v5, "No similar method "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1084,7 +1084,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, " with params "
+    const-string v5, " with params "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1098,7 +1098,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, " could be found on type "
+    const-string v5, " could be found on type "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1113,7 +1113,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "."
+    const-string v5, "."
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1654,7 +1654,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "no method found for "
+    const-string v8, "no method found for "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1674,7 +1674,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "No best method "
+    const-string v10, "No best method "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1684,7 +1684,7 @@
 
     move-result-object v9
 
-    const-string/jumbo v10, " with params "
+    const-string v10, " with params "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1698,7 +1698,7 @@
 
     move-result-object v9
 
-    const-string/jumbo v10, " could be found on type "
+    const-string v10, " could be found on type "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1713,7 +1713,7 @@
 
     move-result-object v9
 
-    const-string/jumbo v10, "."
+    const-string v10, "."
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -78,7 +78,7 @@
 
     .prologue
     .line 64
-    const-string/jumbo v0, "getPackageInfo"
+    const-string v0, "getPackageInfo"
 
     return-object v0
 .end method

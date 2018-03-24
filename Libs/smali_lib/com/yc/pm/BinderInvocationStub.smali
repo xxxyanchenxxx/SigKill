@@ -235,13 +235,13 @@
     if-eqz v1, :cond_0
 
     .line 32
-    const-string/jumbo v1, "android.os.ServiceManager"
+    const-string v1, "android.os.ServiceManager"
 
     invoke-static {v1}, Lcom/yc/pm/Reflect;->on(Ljava/lang/String;)Lcom/yc/pm/Reflect;
 
     move-result-object v1
 
-    const-string/jumbo v2, "sCache"
+    const-string v2, "sCache"
 
     invoke-virtual {v1, v2}, Lcom/yc/pm/Reflect;->get(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -253,7 +253,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "put"
+    const-string v2, "put"
 
     const/4 v3, 0x2
 
